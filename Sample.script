@@ -1,0 +1,54 @@
+
+# hello
+
+# [48-0] -----
+openflash 48 0
+write i2 7 2000
+usleep 1000
+write i2 10 2800
+usleep 1000
+closeflash
+usleep 1000
+
+# [82-0] -----
+openflash 82 0
+usleep 1000
+write h1 0 1
+usleep 1000
+
+# Qmax Cell 0
+write i2 2 2800
+usleep 1000
+
+# Qmax Cell 1
+write i2 7 2800
+usleep 1000
+
+# Cell 0 V at Chg Term
+write i2 24 4200
+usleep 1000
+
+# Cell 1 V at Chg Term
+write i2 26 4200
+usleep 1000
+
+closeflash
+usleep 1000
+
+# [83-0] -----
+openflash 83 0
+usleep 1000
+write i2 2 2800
+usleep 1000
+closeflash
+usleep 1000
+
+# [84-0] -----
+openflash 84 0
+usleep 1000
+write i2 2 2800
+closeflash
+usleep 1000
+
+reset
+usleep 1000
